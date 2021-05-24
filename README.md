@@ -10,16 +10,27 @@ A brief information about each of these are mentioned below:
   Summary: The Chat Server will be running on a host. The same chat client applications will be run on two different     hosts. In this assignment, you have to write a TCP Client and TCP Server applications in C programming language.     Both the applications should run on Ubuntu host (above 16.04+ version).
   
  After both client applications are up, Client-1 should display a chat prompt as:
+
 Connected to Client-2:> hello user 2, how are you?
+
 Client-2:: I am fine, user-1!
+
 Connected to Client-2:>
+
 Connection to Client-1 is closed.
+
 -----
+
 Client-2 should display a chat prompt as:
+
 Connected to Client-1:> 
+
 Client-1:: hello user 2, how are you?
+
 Connected to Client-1:> I am fine, user-1!
+
 Connected to Client-1:>  ....
+
 Connected to Client-1:> quit   OR exit
 
   2. File Transfer from Client to Server using TCP
@@ -36,16 +47,25 @@ Connected to the server at IP Address: 192.168.1.10
 
 File-1 has been sent to the server successfully
 >
+  
 The client and server should follow the following protocol:
 
+  
 Client                                                  Server
-   ----------  SENDING <File-1> 1275 bytes ---------->
-   <--------- RECEIVE-READY <File-1> 1275 bytes ------
-   ---------- Contents of the <File-1>--------------->
-   ---------- Contents of the <File-1>--------------->
-   ---------- Contents of the <File-1>--------------->
-   <--------- RECEIVED <File-1> 1275 bytes ------------
+  
+  ----------  SENDING <File-1> 1275 bytes ---------->
+  
+  <--------- RECEIVE-READY <File-1> 1275 bytes ------
+  
+  ---------- Contents of the <File-1>--------------->
+  
+  ---------- Contents of the <File-1>--------------->
+  
+  ---------- Contents of the <File-1>--------------->
+  
+  <--------- RECEIVED <File-1> 1275 bytes ------------
 
+  
   3. Simulation of Sliding Window Protocol with Selective Repeat
   Summary: In this assignment, you have to write a Sender and Receiver TCP socket applications in C programming         language. Both the applications should run on Ubuntu host (above 16.04+ version).The Sender and Receiver should simulate the Sliding Window Protocol with Selective Repeat.The activity of sending and receiving the packets should be logged (printed) to the console in which the application is started. The sender application will connect to the receiver application by executing the following command:
 
@@ -93,7 +113,9 @@ In the simulation run, the sender should send 50 packets and all of them should 
 
 The log messages displayed in the console windows of Sender and Receiver are as follows:
 
-Sender                              Receiver                    Generate a random number: 1 to 5
+Sender                                   Receiver                    
+          
+Generate a random number: 1 to 5
 
 Enter Window Size: 10      Enter Window Size: 5
 
@@ -152,11 +174,8 @@ Sent Packet-49                      Received Packet-49
 Sent Packet-50                      Received Packet-50    
 
   4. CSMA Network Performance Measurement with NS3 Simulator
-  Summary: In CSMA/CD, the size of a frame must be large enough so that collision can be detected by sender while       sending the frame. So, the frame transmission delay must be at least two times the maximum propagation delay.
-          
-          ![ja](https://user-images.githubusercontent.com/73014381/119352475-5b366900-bcbf-11eb-95f7-bccf1a502b68.PNG)
-
-    
+  Summary: In CSMA/CD, the size of a frame must be large enough so that collision can be detected by sender while       sending the frame. So, the frame transmission delay must be at least two times the maximum propagation delay. 
+   
     Assume some station transmitted data packet and successfully get to the destination but it just the Best Case, so we have to take Worst Case scenario in which there will be contention slots. Contention slots are those slot which are not able to transmit their journey due to the collision. Suppose A station transmitted data but collide and worst case time wasted is 2Tp and then some station B found out a way to transmit the data so it took.
 
 Efficiency = Tt / ( C*2*Tp + Tt + Tp) 
